@@ -1,0 +1,61 @@
+h1,h2 {
+    font: 25pt "Mont";
+}
+
+h1 {
+    z-index: 1;
+    display: table;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+h2 {
+    z-index: 1;
+    position: relative;
+    display: table;
+    margin-left: 10px;
+}
+h1::after, h2::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: -5%;
+    width: 110%;
+    height: 8px;
+    background: linear-gradient(to right, #06C, #639);
+}
+
+h2::after {left: 0px;}
+
+p {
+    font: 13pt "Roboto",Arial;
+    width: 85%;
+    margin: 10px auto;
+}
+
+p a {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-family: "Mont",Arial;
+    padding: 0 3px;
+    margin: 0 3px;
+}
+
+p a:after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top right,#06C,#639);
+    transition: .3s ease;
+}
+
+p a:hover:after {
+    height: 90%;
+}

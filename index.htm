@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wevolve Framework</title>
+        <link href="src/css/main.css" rel="stylesheet" />
+        <link href="src/img/wevolve.ico" rel="icon" />
+        <script defer src="src/js/sideMenu.js"></script>
+        <script defer src="src/js/switchView.js"></script>
+        <script defer src="src/js/Buttons.js"></script>
+        <script defer src="src/js/SectionsTransition.js"></script>
+    </head>
+    <body>
+        <div id="sideMenu">
+            <div id="logoContainer"></div>
+            <h1>Framework</h1>
+            <ul id="switchViewMenu"></ul>
+        </div>
+        <section class="FWView" id="Menus">
+            <input type="checkbox" id="responsiveMenuToggle" />
+            <label for="responsiveMenuToggle" id="responsiveMenuToggleButton"></label>
+            <div id="Menu">
+                <div id="logoContainer"></div>
+                <ul>
+                    <li id="home">Home</li>
+                    <li id="downloads">Downloads</li>
+                    <li id="join-us">Join us</li>
+                </ul>
+            </div>
+        </section>
+        <section class="FWView viewed" id="Texts">
+            <h1>H1 Centered Title</h1>
+            <h2>H2 Left Title</h2>
+            <p>Lorem ipsum dolor, sit amet <a href="#">y'a un lien issou</a>consectetur adipisicing elit. Reprehenderit consequatur ut nemo natus voluptatum quidem sequi sapiente quia iste autem at eaque explicabo blanditiis quasi numquam ipsa, aliquam possimus nihil!</p>
+        </section>
+        <section class="FWView" id="Buttons">
+            <button class="basic color">Basic Button</button>
+            <button class="icon color"><i class="material-icons">power_settings_new</i></button><i>Icon Button</i>
+            <div id="FWcolorBg">
+                <button class="basic white">Basic white Button</button>
+                <button class="icon white"><i class="material-icons">power_settings_new</i></button><i>White Icon Button</i>
+            </div>
+        </section>
+        <section class="FWView" id="SectionsTransition">
+            <button onclick="triggerTransition()">Trigger Transition</button>
+            <div id="transitionContainer" class="">
+            </div>
+        </section>
+        <section class="FWView" id="Forms">
+            <form>
+
+                
+            </form>
+        </section>
+    </body>
+</html>

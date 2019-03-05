@@ -1,0 +1,175 @@
+#Menu {
+    z-index: 3;
+    display: block;
+    /* FOR FRAMEWORK. 
+        USE position: fixed; IN NORMAL USE. */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background: linear-gradient(to right,#06C,#639);
+    color: #fff;
+}
+#Menu ul {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+    list-style-type: none;
+}
+#Menu ul li {
+    position: relative;
+    height: 100%;
+    padding: 0 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#Menu ul li:after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    border-radius: 10em;
+    background: #fff;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%,30px) rotateY(110deg);
+    transition: .3s ease;
+}
+
+#Menu ul li:hover:after {
+    transform: translate(-50%,0) rotateY(0deg);
+}
+
+#Menu #logoContainer {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    width: 150px;
+    height: 100%;
+    background: url("../img/fullLogoWhite.png") center center no-repeat;
+    background-size: 100%;
+}
+#responsiveMenuToggle {
+    position: fixed;
+    top: -2000px;
+}
+#responsiveMenuToggleButton {
+    z-index: 4;
+    /* FOR FRAMEWORK. 
+        USE position: fixed; IN NORMAL USE. */
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: linear-gradient(to top right,#06C,#639);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+}
+#responsiveMenuToggleButton::before {
+    content: 'menu';
+    position: absolute;
+    font: 15pt Material Icons;
+    transition: .3s ease;
+}
+#responsiveMenuToggleButton::after {
+    content: 'close';
+    position: absolute;
+    font: 15pt Material Icons;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+
+
+
+
+#responsiveMenuToggle:checked ~ #responsiveMenuToggleButton::before {opacity: 0;}
+#responsiveMenuToggle:checked ~ #responsiveMenuToggleButton::after {opacity: 1;}
+
+
+@media screen and (max-width: 800px) {
+    #Menu {
+        top: 0;
+        bottom: 0;
+        left: -205px;
+        height: 100%;
+        width: 200px;
+        padding-top: 20px;
+        background: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 3px 0px 2px #00000060;
+        transition: .3s ease;   
+    }
+    #Menu #logoContainer {
+        margin: 10px 0;
+        width: 100%;
+        height: 100px;
+        background-image: url("../img/fullLogoColor.png");
+        background-size: 90%;
+        align-self: flex-start;
+    }
+    #Menu ul {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    #Menu ul li {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+        color: #06C;
+        text-align: center;
+        overflow: hidden;
+        transition: .3s ease;
+        background: #fff;
+        z-index: 3;
+    }
+    #Menu ul li:after {
+        content: '';
+        z-index: -1;
+        transform: none !important; /* @override */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top right, #06C, #17E);
+        border-radius: 0;
+        opacity: 0;
+    }
+
+    #Menu ul li:hover {color: #fff;}
+    #Menu ul li:hover:after {opacity: 1;}
+
+    #responsiveMenuToggle:checked ~ #Menu {
+        left: 0;
+    }
+
+    #responsiveMenuToggleButton{display: flex;}
+}

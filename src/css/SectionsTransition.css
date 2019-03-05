@@ -1,0 +1,29 @@
+#transitionContainer {
+    /* FOR FRAMEWORK. 
+        USE position: fixed; IN NORMAL USE. */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+#transitionContainer:before, #transitionContainer:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #06C;
+    pointer-events: all;
+}
+#transitionContainer:before {left: 0;}
+#transitionContainer:after {right: 0;}
+
+#transitionContainer.active:before, #transitionContainer.active:after {
+    animation: transition 1s ease;
+}
+
+@keyframes transition {
+    40%,50% {width: 50%;}
+}
