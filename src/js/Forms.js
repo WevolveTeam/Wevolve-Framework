@@ -1,8 +1,7 @@
 function replaceInputHTML(type,id,placeholder,required) {
-    // Placeholder : Not a space but a blank character, U+2800 "⠀"
     return `
     <div id='${id}' class='inputContainer'>
-        <input type='${type}' ${required || ""} placeholder="⠀" />
+        <input type='${type}' ${required || ""} placeholder="" />
         <div class='animatedPlaceholder'>${placeholder}</div>
         <div class='animatedBottomLine'></div>
     </div>
