@@ -8,6 +8,7 @@ form .formSection {
     background: #fff;
     border: 1px solid #06C;
     border-radius: 5px;
+    font-size: 15pt;
 }
 
 .inputContainer {
@@ -19,14 +20,17 @@ form .formSection {
 .inputContainer input {
     border: none;
     border-bottom: 3px solid #ddd;
+    font-family: "Roboto","Mont",Arial;
+    font-size: inherit;
 }
 
 .inputContainer .animatedPlaceholder {
     pointer-events: none;
     position: absolute;
-    top: 10px;
-    margin-left: 70px;
-    opacity: 0;
+    top: -5px;
+    left: -15px;
+    transform: scale(0.6);
+    color: #aaa;
     transition: .3s ease;
 }
 
@@ -43,5 +47,7 @@ form .formSection {
 .inputContainer input:placeholder-shown ~ .animatedBottomLine {width: 0;}
 .inputContainer input:placeholder-shown ~ .animatedPlaceholder {
     opacity: 1;
-    margin-left: 0;
+    top: 10px;
+    left: 0;
+    transform: none;
 }
