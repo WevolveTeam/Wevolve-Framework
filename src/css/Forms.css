@@ -9,3 +9,39 @@ form .formSection {
     border: 1px solid #06C;
     border-radius: 5px;
 }
+
+.inputContainer {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.inputContainer input {
+    border: none;
+    border-bottom: 3px solid #ddd;
+}
+
+.inputContainer .animatedPlaceholder {
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+    margin-left: 70px;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.inputContainer .animatedBottomLine {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #06C,#639);
+    transition: .3s ease;
+}
+
+.inputContainer input:placeholder-shown ~ .animatedBottomLine {width: 0;}
+.inputContainer input:placeholder-shown ~ .animatedPlaceholder {
+    opacity: 1;
+    margin-left: 0;
+}
