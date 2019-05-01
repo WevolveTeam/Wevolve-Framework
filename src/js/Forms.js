@@ -1,19 +1,37 @@
-function replaceInputHTML(type,id,placeholder,required) {
-    return `
-    <div id='${id}' class='inputContainer'>
-        <input type='${type}' ${required || ""} placeholder="" />
-        <div class='animatedPlaceholder'>${placeholder}</div>
+function replaceInputs(input = new HTMLInputElement) {
+    var type = input.type,
+        id = input.id || `${input.name}__${input.value}`,
+        name = input.name
+    ;
+    var container = document.createElement("div");
+    container.id = id;
+
+    if (type == "text" || type == "password") {
+        container.className = "textInputContainer";
+        container.innerHTML = `
+        <input type='${type}' placeholder='' name='${name}' ${input.required ? "required" :""} />
         <div class='animatedBottomLine'></div>
-    </div>
-    `;
+        <div class='animatedPlaceholder'>${input.placeholder}</div>
+        `;
+    } else if (type == "radio") {
+        container.className = "radioInputContainer";
+        container.innerHTML = `
+        <input type="radio" class='styledRadioButton' name='${name}' value='${input.value}' id='radio__${id}' />
+        <label for='radio__${id}' class='displayRadioButton'></label>
+        <label for='radio__${id}' class='styledRadioButtonLabel'>${input.getAttribute("label")}</label>
+        `;
+    }
+
+
+    input.insertAdjacentElement("afterend",container);
+    input.remove();
+
+
 }
 
 
-var allInputs = document.querySelectorAll("input[type='text'],input[type='password']");
+var allInputs = document.getElementsByTagName("input");
 
-for (let i of allInputs) {
-    let e = document.createElement("div");
-    e.innerHTML = replaceInputHTML(i.getAttribute("type"),i.id,i.getAttribute("placeholder"),i.getAttribute("required"));
-    i.insertAdjacentElement("afterend",e);
-    i.remove();
+for (var input of allInputs) {
+    replaceInputs(input);
 }

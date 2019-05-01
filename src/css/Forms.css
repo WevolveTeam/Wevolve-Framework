@@ -11,20 +11,20 @@ form .formSection {
     font-size: 15pt;
 }
 
-.inputContainer {
+.textInputContainer {
     position: relative;
     display: inline-block;
     padding: 10px 0;
 }
 
-.inputContainer input {
+.textInputContainer input {
     border: none;
     border-bottom: 3px solid #ddd;
     font-family: "Roboto","Mont",Arial;
     font-size: inherit;
 }
 
-.inputContainer .animatedPlaceholder {
+.textInputContainer .animatedPlaceholder {
     pointer-events: none;
     position: absolute;
     top: -5px;
@@ -34,7 +34,7 @@ form .formSection {
     transition: .3s ease;
 }
 
-.inputContainer .animatedBottomLine {
+.textInputContainer .animatedBottomLine {
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -44,10 +44,54 @@ form .formSection {
     transition: .3s ease;
 }
 
-.inputContainer input:placeholder-shown ~ .animatedBottomLine {width: 0;}
-.inputContainer input:placeholder-shown ~ .animatedPlaceholder {
+.textInputContainer input:placeholder-shown ~ .animatedBottomLine {width: 0;}
+.textInputContainer input:placeholder-shown ~ .animatedPlaceholder {
     opacity: 1;
     top: 10px;
     left: 0;
     transform: none;
+}
+.radioInputContainer input[type="radio"] {
+    display: none;
+}
+.radioInputContainer {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+label.styledRadioButtonLabel {
+    margin: 0 10px;
+    cursor: pointer;
+}
+label.displayRadioButton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #06C;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+label.displayRadioButton::after {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background: #06C;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.radioInputContainer input[type="radio"]:checked ~ label.displayRadioButton::after {
+    transform: scale(1);
+}
+
+.radioInputContainer input[type="radio"]:checked ~ label.displayRadioButton {
+    border-width: 3px;
+    margin-left: -1.5px;
 }
