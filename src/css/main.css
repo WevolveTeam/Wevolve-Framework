@@ -4,6 +4,7 @@
 @import url("Buttons.css");
 @import url("SectionsTransition.css");
 @import url("Forms.css");
+@import url("Table.css");
 
 @font-face {
     font-family: "Mont";
@@ -88,6 +89,7 @@ div#sideMenu ul li::before {
 section.FWView {
     position: relative;
     overflow: hidden;
+    overflow-y: auto;
     box-sizing: border-box;
     top: 0;
     right: 0;

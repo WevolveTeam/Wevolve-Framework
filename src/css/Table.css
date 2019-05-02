@@ -1,0 +1,26 @@
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    display: table;
+    border: 1px solid #639;
+    border-radius: 5px;
+}
+
+thead {
+    background: linear-gradient(to top right, #06C, #639);
+    color: #fff;
+}
+
+thead th {
+    padding: 5px 0;
+}
+
+tr,td {
+    border: 1px solid #639;
+}
+
+td {
+    padding: 10px;
+    transition: .2s ease;
+}
