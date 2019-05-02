@@ -6,3 +6,4 @@
 - Buttons
 - SectionTransition
 - Forms
+- Table
