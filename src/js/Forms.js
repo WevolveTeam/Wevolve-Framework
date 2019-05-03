@@ -19,7 +19,7 @@ function replaceInputs(input) {
     if (type == "text" || type == "password") {
         container.className = "textInputContainer";
         container.innerHTML = `
-        <input type='${type}' placeholder='' name='${name}' ${input.required ? "required" :""} />
+        <input type='${type}' placeholder=' ' name='${name}' ${input.required ? "required" :""} />
         <div class='animatedBottomLine'></div>
         <div class='animatedPlaceholder'>${input.placeholder}</div>
         `;
