@@ -86,34 +86,13 @@
 }
 
 #Footer footer #ytMade {
-    color: #fff;
     position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-}
-#Footer footer #ytMade #youtubeLogo {
-    display: inline-block;
-    position: relative;
-}
-#Footer footer #ytMade #youtubeLogo::before,#Footer footer #ytMade #youtubeLogo::after {
-    content: '';
-    position: absolute;
-    display: block;
-    top: -18px;
-    left: 0;
-    width: 100px;
-    height: 25px;
-    background: url("../img/ytWhite.png") center center no-repeat;
+    bottom: 0;
+    width: 250px;
+    height: 40px;
+    background: url("../img/youtubeDev.png") center center no-repeat;
     background-size: 100%;
-    transition: opacity .3s ease;
-}
-#Footer footer #ytMade #youtubeLogo::after {
-    background: url("../img/ytRed.png") center center no-repeat;
-    background-size: 100%;
-    opacity: 0;
-}
-
+}   
 #Footer footer #languages {
     position: absolute;
     top:  80px;
