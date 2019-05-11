@@ -1,0 +1,115 @@
+#Footer footer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    padding: 25px 0;
+    background: linear-gradient(to top right, #06C, #639 80%);
+}
+#Footer footer .footerFlex {
+    margin: 0 50px;
+}
+#Footer footer a {
+    display: inline-block;
+    margin: 5px 0;
+    color: #FFFFFF90;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+#Footer footer a:hover { color: #fff; }
+#Footer footer ul {
+    list-style: none;
+    padding: 0;
+}
+#Footer footer h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 15pt;
+    text-align: left;
+}
+#Footer footer h2::after {content:none;}
+#Footer footer #wevolveLogo {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 130px;
+    height: 35px;
+    background: url("../img/fullLogoWhite.png") left center no-repeat;
+    background-size: 100%;
+}
+
+#Footer footer #ytMade #youtubeLogo:hover::after {opacity: 1;}
+#Footer footer #socialLinks a {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+#Footer footer #socialLinks a::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../img/logoWhite.png") center center no-repeat;
+    background-size: 100%;
+    margin-right: 10px;
+}
+#Footer footer #socialLinks a#facebook::before {background-image: url("../img/icons/facebook.png");}
+#Footer footer #socialLinks a#twitter::before {background-image: url("../img/icons/twitter.png");}
+#Footer footer #socialLinks a#github::before {background-image: url("../img/icons/github.png");}
+#Footer footer #socialLinks a#discord::before {background-image: url("../img/icons/discord.png");}
+
+#Footer footer #selectLanguage {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 130px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: none;
+    color: #fff;
+    font-size: 12pt;
+}
+#Footer footer #selectLanguage-wrap {position: relative;}
+#Footer footer #selectLanguage-wrap::after {
+    content: '';
+    position: absolute;
+    right: 3px;
+    bottom: 5px;
+    border: 5px solid transparent;
+    border-top: 5px solid #fff;
+}
+
+#Footer footer #ytMade {
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+#Footer footer #ytMade #youtubeLogo {
+    display: inline-block;
+    position: relative;
+}
+#Footer footer #ytMade #youtubeLogo::before,#Footer footer #ytMade #youtubeLogo::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: -18px;
+    left: 0;
+    width: 100px;
+    height: 25px;
+    background: url("../img/ytWhite.png") center center no-repeat;
+    background-size: 100%;
+    transition: opacity .3s ease;
+}
+#Footer footer #ytMade #youtubeLogo::after {
+    background: url("../img/ytRed.png") center center no-repeat;
+    background-size: 100%;
+    opacity: 0;
+}
