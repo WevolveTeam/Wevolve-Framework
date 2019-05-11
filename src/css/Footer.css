@@ -113,3 +113,9 @@
     background-size: 100%;
     opacity: 0;
 }
+
+#Footer footer #languages {
+    position: absolute;
+    top:  80px;
+    left: 20px;
+}
