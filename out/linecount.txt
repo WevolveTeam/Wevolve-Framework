@@ -1,0 +1,40 @@
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2019-05-12 18:35:26
+count workspace : c:\Users\leflo\Documents\Projets\Wevolve-Framework
+total files : 28
+total code lines : 876
+total comment lines : 8
+total blank lines : 71
+
+index.htm, code is 81, comment is 0, blank is 0.
+README.md, code is 8, comment is 0, blank is 1.
+src\css\Buttons.css, code is 68, comment is 1, blank is 5.
+src\css\Footer.css, code is 108, comment is 1, blank is 5.
+src\css\Forms.css, code is 137, comment is 0, blank is 11.
+src\css\main.css, code is 109, comment is 0, blank is 2.
+src\css\Menus.css, code is 169, comment is 4, blank is 19.
+src\css\Mont.ttf, it is a binary file.
+src\css\SectionsTransition.css, code is 25, comment is 2, blank is 2.
+src\css\Table.css, code is 21, comment is 0, blank is 5.
+src\css\Texts.css, code is 59, comment is 0, blank is 6.
+src\img\fullLogoColor.png, it is a binary file.
+src\img\fullLogoWhite.png, it is a binary file.
+src\img\icons\discord.png, it is a binary file.
+src\img\icons\facebook.png, it is a binary file.
+src\img\icons\github.png, it is a binary file.
+src\img\icons\twitter.png, it is a binary file.
+src\img\icons\youtube.png, it is a binary file.
+src\img\logoWhite.png, it is a binary file.
+src\img\youtubeDev.png, it is a binary file.
+src\img\ytRed.png, it is a binary file.
+src\img\ytWhite.png, it is a binary file.
+src\js\Buttons.js, code is 19, comment is 0, blank is 4.
+src\js\Forms.js, code is 40, comment is 0, blank is 7.
+src\js\main.js, code is 0, comment is 0, blank is 0.
+src\js\SectionsTransition.js, code is 5, comment is 0, blank is 1.
+src\js\sideMenu.js, code is 7, comment is 0, blank is 0.
+src\js\switchView.js, code is 20, comment is 0, blank is 3.
+===============================================================================

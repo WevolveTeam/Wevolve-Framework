@@ -18,7 +18,7 @@
             <h1>Framework</h1>
             <ul id="switchViewMenu"></ul>
         </div>
-        <section class="FWView" id="Menus">
+        <section class="FWView viewed" id="Menus">
             <input type="checkbox" nostyle="true" id="responsiveMenuToggle" />
             <label for="responsiveMenuToggle" id="responsiveMenuToggleButton"></label>
             <div id="Menu">
@@ -28,7 +28,17 @@
                     <li id="downloads"><a href="#">Downloads</a></li>
                     <li id="join-us"><a href="#">Join us</a></li>
                 </ul>
+                <div id="profile">
+                <div id="ifConnected">
+                    <div id="profilePic"></div>
+                    <div id="dropDownProfileMenu">
+                    </div>
+                </div>
+                <div id="ifNotConnected">
+                    <button class="basic white" href="#">Login</button>
+                </div>
             </div>
+        </div>
         </section>
         <section class="FWView" id="Texts">
             <h1>H1 Centered Title</h1>
@@ -93,7 +103,7 @@
             </table>
             <b><i>WORK IN PROGRESS</i></b>
         </section>
-        <section class="FWView viewed" id="Footer">
+        <section class="FWView" id="Footer">
             <footer>
                 <div id="wevolveLogo"></div>
                 <div class="footerFlex"> 
