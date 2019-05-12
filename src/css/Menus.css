@@ -74,25 +74,64 @@
     right: 10px;
     display: inline-block;
 }
-
-#Menu #profileSection #ifConnected #profilePic {
+#Menu #profileSection #ifConnected #dropDownDisplayToggle {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+#Menu #profileSection #ifConnected #profilePic,#Menu #profileSection #ifConnected #dropDownProfileMenu #profilePic {
+    position: relative;
+    display: block;
     width: 50px;
     height: 50px;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     border-radius: 50%;
-    background: url("http://1.bp.blogspot.com/-Eutb-69Ko10/T1NXXjFp26I/AAAAAAAAAVA/_XcHQRfMCuc/s1600/smpte169.jpg") center center no-repeat;
+    background: url("https://am-a.akamaihd.net/image?f=https://news-a.akamaihd.net/public/images/articles/2018/september/worlds2018lm/icon-worlds.jpg") center center no-repeat;
     background-size: cover;
     cursor: pointer;
 }
 #Menu #profileSection #ifConnected #dropDownProfileMenu {
     position: absolute;
-    height: 300px;
-    background: red;
-    left: -100px;
-    color: white;
+    width: 200px;
+    height: 0;
+    background: white;
+    top: 70px;
+    right: 0px;
+    color: black;
+    box-shadow: 0 3px 12px #1b1f2326;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: height .3s ease;
+}
+#Menu #profileSection #ifConnected #dropDownDisplayToggle:checked ~ #dropDownProfileMenu {
+    height: 275px;
+}
+#Menu #profileSection #ifConnected #dropDownProfileMenu #profilePic {
+    margin: 20px auto;
+    border: none;
+    box-shadow: 0px 3px 12px #1b1f2365;
+    cursor: default;
+}
+#Menu #profileSection #ifConnected #dropDownProfileMenu ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    list-style: none;
 }
 
-
+#Menu #profileSection #ifConnected #dropDownProfileMenu ul li {
+    width: 100%;
+    text-align: center;
+}
+#Menu #profileSection #ifConnected #dropDownProfileMenu ul li a {
+    display: block;
+    padding: 10px 0;
+    transition: .3s ease;
+}
+#Menu #profileSection #ifConnected #dropDownProfileMenu ul li a:hover {
+    background: #eee;
+}
 #responsiveMenuToggle {
     position: fixed;
     top: -2000px;

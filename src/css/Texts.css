@@ -29,6 +29,10 @@ h1::after, h2::after {
 
 h2::after {left: 0px;}
 
+h3 {
+    font: 14pt "Mont";
+    text-align: center;
+}
 p {
     font: 13pt "Roboto",Arial;
     width: 85%;
