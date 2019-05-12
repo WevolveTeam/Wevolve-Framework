@@ -7,7 +7,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 200px;
+    height: 250px;
     padding: 25px 0;
     background: linear-gradient(to top right, #06C, #639 80%);
 }
@@ -16,15 +16,20 @@
 }
 #Footer footer a {
     display: inline-block;
-    margin: 5px 0;
+    /* margin: 15px 0; */
     color: #FFFFFF90;
     text-decoration: none;
     transition: color .3s ease;
 }
 #Footer footer a:hover { color: #fff; }
 #Footer footer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     list-style: none;
     padding: 0;
+    margin: 0;
+    height: 150px;
 }
 #Footer footer h2 {
     margin: 0;
@@ -57,7 +62,11 @@
     background: url("../img/logoWhite.png") center center no-repeat;
     background-size: 100%;
     margin-right: 10px;
+    opacity: .5;
+    transition: .3s ease;
 }
+#Footer footer #socialLinks a:hover::before { opacity:  1; }
+
 #Footer footer #socialLinks a#facebook::before {background-image: url("../img/icons/facebook.png");}
 #Footer footer #socialLinks a#twitter::before {background-image: url("../img/icons/twitter.png");}
 #Footer footer #socialLinks a#github::before {background-image: url("../img/icons/github.png");}
@@ -67,6 +76,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    -moz-user-focus: none;
     position: relative;
     width: 130px;
     border: none;

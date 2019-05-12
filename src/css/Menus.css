@@ -25,7 +25,8 @@
     align-items: center; 
     list-style-type: none;
 }
-#Menu ul li {
+#Menu ul li { height: 100%; }
+#Menu ul li a {
     position: relative;
     height: 100%;
     padding: 0 10px;
@@ -34,9 +35,11 @@
     align-items: center;
     cursor: pointer;
     white-space: nowrap;
+    color: #fff;
+    text-decoration: none;
 }
 
-#Menu ul li:after {
+#Menu ul li a:after {
     content: '';
     position: absolute;
     width: 80%;
@@ -49,7 +52,7 @@
     transition: .3s ease;
 }
 
-#Menu ul li:hover:after {
+#Menu ul li a:hover:after {
     transform: translate(-50%,0) rotateY(0deg);
 }
 
@@ -136,7 +139,8 @@
         width: 100%;
         height: 100%;
     }
-    #Menu ul li {
+    #Menu ul li { height: auto; }
+    #Menu ul li a {
         display: block;
         width: 100%;
         height: auto;
@@ -148,7 +152,7 @@
         background: #fff;
         z-index: 3;
     }
-    #Menu ul li:after {
+    #Menu ul li a:after {
         content: '';
         z-index: -1;
         transform: none !important; /* @override */
@@ -164,8 +168,8 @@
         opacity: 0;
     }
 
-    #Menu ul li:hover {color: #fff;}
-    #Menu ul li:hover:after {opacity: 1;}
+    #Menu ul li a:hover {color: #fff;}
+    #Menu ul li a:hover:after {opacity: 1;}
 
     #responsiveMenuToggle:checked ~ #Menu {
         left: 0;

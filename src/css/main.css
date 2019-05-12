@@ -11,7 +11,7 @@
     font-family: "Mont";
     src: url("Mont.ttf");
 }
-* {
+*:focus {
     outline: none;
 }
 html, body {
