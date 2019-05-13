@@ -86,7 +86,7 @@
     height: 50px;
     border: 2px solid #fff;
     border-radius: 50%;
-    background: url("https://am-a.akamaihd.net/image?f=https://news-a.akamaihd.net/public/images/articles/2018/september/worlds2018lm/icon-worlds.jpg") center center no-repeat;
+    background: url("https://cdn.discordapp.com/avatars/192671814650953728/adf240a967a62cf6358e636d205f7c1a.jpg?size=1024") center center no-repeat;
     background-size: cover;
     cursor: pointer;
 }
@@ -94,10 +94,10 @@
     position: absolute;
     width: 200px;
     height: 0;
-    background: white;
+    background: linear-gradient(to top right, #06C, #639);
     top: 70px;
     right: 0px;
-    color: black;
+    color: #fff;
     box-shadow: 0 3px 12px #1b1f2326;
     border-radius: 3px;
     overflow: hidden;
@@ -130,8 +130,11 @@
     transition: .3s ease;
 }
 #Menu #profileSection #ifConnected #dropDownProfileMenu ul li a:hover {
-    background: #eee;
+    background: #FFFFFF10;
 }
+
+#responsiveProfileSection {display: none;}
+
 #responsiveMenuToggle {
     position: fixed;
     top: -2000px;
@@ -141,24 +144,30 @@
     /* FOR FRAMEWORK. 
         USE position: fixed; IN NORMAL USE. */
     position: absolute;
-    top: 3px;
-    left: 3px;
+    top: 0;
+    left: 0;
     cursor: pointer;
     width: 35px;
     height: 35px;
-    border-radius: 50%;
-    background: linear-gradient(to top right,#06C,#639);
+    box-shadow: 5px 5px 10px #79797980;
     display: none;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    color: #fff;
+    color: #FFF;
+    transition: .3s ease;
 }
 #responsiveMenuToggleButton::before {
     content: 'menu';
     position: absolute;
     font: 15pt Material Icons;
     transition: .3s ease;
+    background: linear-gradient(to top right, #06C, #639);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #responsiveMenuToggleButton::after {
     content: 'close';
@@ -183,7 +192,6 @@
         left: -205px;
         height: 100%;
         width: 200px;
-        padding-top: 20px;
         background: #FFF;
         display: flex;
         flex-direction: column;
@@ -193,22 +201,17 @@
         transition: .3s ease;   
     }
     #Menu #logoContainer {
-        margin: 10px 0;
-        width: 100%;
-        height: 100px;
-        background-image: url("../img/fullLogoColor.png");
-        background-size: 90%;
-        align-self: flex-start;
+        display: none;
     }
-    #Menu ul {
+    #Menu > ul {
         position: relative;
         display: block;
         width: 100%;
         height: 100%;
         left: 0;
     }
-    #Menu ul li { height: auto; }
-    #Menu ul li a {
+    #Menu > ul li { height: auto; }
+    #Menu > ul li a {
         display: block;
         width: 100%;
         height: auto;
@@ -220,7 +223,7 @@
         background: #fff;
         z-index: 3;
     }
-    #Menu ul li a:after {
+    #Menu > ul li a:after {
         content: '';
         z-index: -1;
         transform: none !important; /* @override */
@@ -236,12 +239,32 @@
         opacity: 0;
     }
 
-    #Menu ul li a:hover {color: #fff;}
-    #Menu ul li a:hover:after {opacity: 1;}
+    #Menu > ul li a:hover {color: #fff;}
+    #Menu > ul li a:hover:after {opacity: 1;}
+
+    #Menu #profileSection  { display: none; }
+
+    #Menu #responsiveProfileSection {
+        margin: 0;
+        top: 0;
+        width: 100%;
+        background: linear-gradient(to top right, #06C, #639);
+        overflow: hidden;
+    }
+
+    #Menu #profileSection #ifConnected #dropDownProfileMenu {display: none;}
+
+    #responsiveProfileSection {display: block;}
 
     #responsiveMenuToggle:checked ~ #Menu {
         left: 0;
     }
-
-    #responsiveMenuToggleButton{display: flex;}
+    #responsiveMenuToggleButton{
+        display: flex;
+    }
+    #responsiveMenuToggle:checked ~ #responsiveMenuToggleButton {
+        background: transparent;
+        color: #FFF;
+        box-shadow: none;
+    }
 }
