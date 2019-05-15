@@ -11,7 +11,7 @@
     background: linear-gradient(to right,#06C,#639);
     color: #fff;
 }
-#Menu > ul {
+#Menu #mainLinks {
     position: absolute;
     right: 150px;
     height: 100%;
@@ -25,8 +25,8 @@
     align-items: center; 
     list-style-type: none;
 }
-#Menu > ul li { height: 100%; }
-#Menu > ul li a {
+#Menu #mainLinks li { height: 100%; }
+#Menu #mainLinks li a {
     position: relative;
     height: 100%;
     padding: 0 10px;
@@ -39,7 +39,7 @@
     text-decoration: none;
 }
 
-#Menu > ul li a:after {
+#Menu #mainLinks li a:after {
     content: '';
     position: absolute;
     width: 80%;
@@ -52,7 +52,7 @@
     transition: .3s ease;
 }
 
-#Menu > ul li a:hover:after {
+#Menu #mainLinks li a:hover:after {
     transform: translate(-50%,0) rotateY(0deg);
 }
 
@@ -73,13 +73,23 @@
     transform: translateY(-50%);
     right: 10px;
     display: inline-block;
+    width: 50px;
+    height: 50px;
 }
+#Menu #profileSection #ifNotConnected {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+#Menu #profileSection #logoContainer {display: none;}
 #Menu #profileSection #ifConnected #dropDownDisplayToggle {
     position: absolute;
     pointer-events: none;
     opacity: 0;
 }
-#Menu #profileSection #ifConnected #profilePic,#Menu #profileSection #ifConnected #dropDownProfileMenu #profilePic {
+#Menu #profileSection #profilePic,#Menu #responsiveProfileSection #profilePic {
     position: relative;
     display: block;
     width: 50px;
@@ -95,8 +105,8 @@
     width: 200px;
     height: 0;
     background: linear-gradient(to top right, #06C, #639);
-    top: 70px;
-    right: 0px;
+    top: 75px;
+    right: 5px;
     color: #fff;
     box-shadow: 0 3px 12px #1b1f2326;
     border-radius: 3px;
@@ -133,7 +143,7 @@
     background: #FFFFFF10;
 }
 
-#responsiveProfileSection {display: none;}
+/* #responsiveProfileSection {display: none;} */
 
 #responsiveMenuToggle {
     position: fixed;
@@ -200,18 +210,26 @@
         box-shadow: 3px 0px 2px #00000060;
         transition: .3s ease;   
     }
-    #Menu #logoContainer {
+    #Menu > #logoContainer {
         display: none;
     }
-    #Menu > ul {
+    #Menu #logoContainer {
+        height: 30px;
+        width: 100px;
+        margin-left: 50%;
+        margin-top: 5px;
+        transform: translateX(-50%);
+    }
+    #Menu #mainLinks {
         position: relative;
         display: block;
+        margin-top: 10px;
         width: 100%;
         height: 100%;
         left: 0;
     }
-    #Menu > ul li { height: auto; }
-    #Menu > ul li a {
+    #Menu #mainLinks li { height: auto; }
+    #Menu #mainLinks li a {
         display: block;
         width: 100%;
         height: auto;
@@ -223,7 +241,7 @@
         background: #fff;
         z-index: 3;
     }
-    #Menu > ul li a:after {
+    #Menu #mainLinks li a:after {
         content: '';
         z-index: -1;
         transform: none !important; /* @override */
@@ -239,22 +257,42 @@
         opacity: 0;
     }
 
-    #Menu > ul li a:hover {color: #fff;}
-    #Menu > ul li a:hover:after {opacity: 1;}
+    #Menu #mainLinks li a:hover {color: #fff;}
+    #Menu #mainLinks li a:hover:after {opacity: 1;}
 
-    #Menu #profileSection  { display: none; }
-
-    #Menu #responsiveProfileSection {
-        margin: 0;
+    #Menu #profileSection  {
+        position: relative;
+        height: auto;
+        left: 0;
         top: 0;
+        transform: none;
         width: 100%;
         background: linear-gradient(to top right, #06C, #639);
-        display: block;
+    }
+    #Menu #profileSection #logoContainer {display: block;}
+    #Menu #profileSection #ifNotConnected {
+        position: relative;
+        transform: translateX(-50%);
+        top: 0;
+        right: 0;
+        margin: 10px;
+        margin-left: 50%;
+    }
+    #Menu #profileSection #ifConnected #profilePic {
+        margin: 5px auto;
+    }
+    #Menu #profileSection #ifConnected #dropDownDisplayToggle:checked ~ #dropDownProfileMenu {height: 130px}
+    #Menu #profileSection #ifConnected #dropDownProfileMenu {
+        top: 0;
+        left: 0;
+        position: relative;
+        background: none;
+        box-shadow: none;
     }
 
-    #Menu #profileSection #ifConnected #dropDownProfileMenu {display: none;}
-
-    #responsiveProfileSection {display: block;}
+    #Menu #profileSection #ifConnected #dropDownProfileMenu #profilePic,
+    #Menu #profileSection #ifConnected #dropDownProfileMenu h3  
+    {display: none;}
 
     #responsiveMenuToggle:checked ~ #Menu {
         left: 0;

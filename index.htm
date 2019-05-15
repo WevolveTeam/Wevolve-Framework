@@ -22,35 +22,47 @@
             <input type="checkbox" nostyle="true" id="responsiveMenuToggle" />
             <label for="responsiveMenuToggle" id="responsiveMenuToggleButton"></label>
             <div id="Menu">
-                <div id="responsiveProfileSection">
-                    <div id="profilePic"></div>
-                    <h3>Hickacou</h3>
-                </div>
+                <div id="profileSection">
+                        <div id="logoContainer"></div>
+                            <div id="ifConnected">
+                                <input type="checkbox" nostyle="true" id="dropDownDisplayToggle" />
+                                <label for="dropDownDisplayToggle" id="profilePic"></label>
+                                <div id="dropDownProfileMenu">
+                                    <div id="profilePic"></div>
+                                    <h3>Hickacou</h3>
+                                    <ul>
+                                        <li id="profile"><a href="#">My profile</a></li>
+                                        <li id="settings"><a href="#">Settings</a></li>
+                                        <li id="logout"><a href="#">Log out</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        <div id="ifNotConnected">
+                            <button class="basic white" href="#">Login</button>
+                        </div>
+                    </div>
                 <div id="logoContainer"></div>
-                <ul>
+                <ul id="mainLinks">
                     <li id="home"><a href="#">Home</a></li>
                     <li id="downloads"><a href="#">Downloads</a></li>
                     <li id="join-us"><a href="#">Join us</a></li>
                 </ul>
-                <div id="profileSection">
-                    <div id="ifConnected">
-                        <input type="checkbox" nostyle="true" id="dropDownDisplayToggle" />
-                        <label for="dropDownDisplayToggle" id="profilePic"></label>
-                        <div id="dropDownProfileMenu">
-                            <div id="profilePic"></div>
-                            <h3>Hickacou</h3>
-                            <ul>
-                                <li id="profile"><a href="#">My profile</a></li>
-                                <li id="settings"><a href="#">Settings</a></li>
-                                <li id="logout"><a href="#">Log out</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                <!--<div id="ifNotConnected">
-                    <button class="basic white" href="#">Login</button>
-                </div> -->
+                
             </div>
-            </div>
+            <button id="profileSectionSwitch" style="margin:300px;">Switch Connected/Not Connected</button>
+            <script defer>
+            var btnPss = document.getElementById("profileSectionSwitch");
+            var ifc = document.getElementById("ifConnected");
+            var ifnc = document.getElementById("ifNotConnected");
+            var conenb = true;
+            btnPss.addEventListener("click", () => {
+                console.log(ifc);
+                ifc.style.display = conenb ? "none" : "block";
+                ifnc.style.display = conenb ? "block" : "none";
+                conenb = !conenb;
+            });
+            </script>
+
         </section>
         <section class="FWView" id="Texts">
             <h1>H1 Centered Title</h1>
