@@ -89,7 +89,7 @@
     pointer-events: none;
     opacity: 0;
 }
-#Menu #profileSection #profilePic,#Menu #responsiveProfileSection #profilePic {
+#Menu #profileSection #profilePic {
     position: relative;
     display: block;
     width: 50px;
@@ -100,6 +100,8 @@
     background-size: cover;
     cursor: pointer;
 }
+
+
 #Menu #profileSection #ifConnected #dropDownProfileMenu {
     position: absolute;
     width: 200px;
@@ -282,7 +284,8 @@
         margin: 5px auto;
         margin-bottom: 20px;
     }
-    #Menu #profileSection #ifConnected #profilePic #after {
+    #Menu #profileSection #ifConnected #profilePic::after {
+        content: '';
         position: absolute;
         bottom: -20px;
         left: 50%;
@@ -295,7 +298,7 @@
         transition: .3s ease;
         z-index: 5;
     }
-    #Menu #profileSection #ifConnected #dropDownDisplayToggle:checked ~ #profilePic #after {
+    #Menu #profileSection #ifConnected #dropDownDisplayToggle:checked ~ #profilePic::after {
         transform: translateX(-50%) rotateX(180deg);
         bottom: -150px;
     }
