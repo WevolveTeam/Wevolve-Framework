@@ -280,8 +280,26 @@
     }
     #Menu #profileSection #ifConnected #profilePic {
         margin: 5px auto;
+        margin-bottom: 20px;
     }
-    #Menu #profileSection #ifConnected #dropDownDisplayToggle:checked ~ #dropDownProfileMenu {height: 130px}
+    #Menu #profileSection #ifConnected #profilePic #after {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        cursor: pointer;
+        border: 7px solid transparent;
+        border-top-color: white;
+        transition: .3s ease;
+        z-index: 5;
+    }
+    #Menu #profileSection #ifConnected #dropDownDisplayToggle:checked ~ #profilePic #after {
+        transform: translateX(-50%) rotateX(180deg);
+        bottom: -150px;
+    }
+    #Menu #profileSection #ifConnected #dropDownDisplayToggle:checked ~ #dropDownProfileMenu {height: 140px}
     #Menu #profileSection #ifConnected #dropDownProfileMenu {
         top: 0;
         left: 0;
