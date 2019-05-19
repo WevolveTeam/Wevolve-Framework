@@ -36,6 +36,7 @@
     color: #fff;
     font-size: 15pt;
     text-align: left;
+    font-family: "Geomanist-Book";
 }
 #Footer footer h2::after {content:none;}
 #Footer footer #wevolveLogo {
