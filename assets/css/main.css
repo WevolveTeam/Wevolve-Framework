@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: "Mont";
-    src: url("Mont.ttf");
+    src: url("../font/Mont.ttf");
 }
 *:focus {
     outline: none;
