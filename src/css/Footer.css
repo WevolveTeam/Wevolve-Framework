@@ -10,6 +10,7 @@
     height: 250px;
     padding: 25px 0;
     background: linear-gradient(to top right, #06C, #639 80%);
+    overflow: hidden;
 }
 #Footer footer .footerFlex {
     margin: 0 50px;
@@ -96,6 +97,7 @@
     bottom: 5px;
     border: 5px solid transparent;
     border-top: 5px solid #fff;
+    pointer-events: none;
 }
 #Footer footer #languages {
     position: absolute;
@@ -112,3 +114,40 @@
     background: url("../img/youtubeDev.png") center center no-repeat;
     background-size: 100%;
 }   
+.footerFlex#social {
+    align-self: baseline;
+}
+
+@media screen and (max-width: 1260px) {
+    #Footer footer #languages {
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: 40px;
+    }
+    #Footer footer #wevolveLogo {
+        top: auto;
+        bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .footerFlex#socials ul,.footerFlex#socials h2 {
+        font-size: 0pt;
+    }
+    .footerFlex#socials ul   {
+        flex-direction: row;
+    }
+    .footerFlex#socials {
+        margin: 0 !important;
+        position: absolute;
+        bottom: -110px;
+        right: 0px;
+        flex-shrink: 0;
+        align-self: flex-end;
+    }
+    .footerFlex#socials ul#socialLinks li a::before {
+        width: 30px;
+        height: 30px;
+    }
+}
