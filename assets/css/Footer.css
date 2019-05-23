@@ -116,9 +116,6 @@
     background-size: 100%;
     background-position: 50% 60%;
 }   
-.footerFlex#social {
-    align-self: baseline;
-}
 
 @media screen and (max-width: 1260px) {
     #Footer footer #languages {
