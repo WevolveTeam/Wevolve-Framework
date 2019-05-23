@@ -37,6 +37,7 @@
     color: #fff;
     font-size: 15pt;
     text-align: left;
+    font-family: "Geomanist-Book";
 }
 #Footer footer h2::after {content:none;}
 #Footer footer #wevolveLogo {
@@ -113,6 +114,7 @@
     height: 40px;
     background: url("../img/youtubeDev.png") center center no-repeat;
     background-size: 100%;
+    background-position: 50% 60%;
 }   
 .footerFlex#social {
     align-self: baseline;
@@ -133,7 +135,7 @@
 
 @media screen and (max-width: 760px) {
     .footerFlex#socials ul,.footerFlex#socials h2 {
-        font-size: 0pt;
+        font-size: 0pt !important;
     }
     .footerFlex#socials ul   {
         flex-direction: row;

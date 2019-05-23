@@ -11,6 +11,10 @@
     font-family: "Mont";
     src: url("../font/Mont.ttf");
 }
+@font-face {
+    font-family: "Geomanist-Book";
+    src: url("../font/Geomanist.ttf");
+}
 *:focus {
     outline: none;
 }
