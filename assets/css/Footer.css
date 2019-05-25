@@ -105,17 +105,12 @@
     top:  80px;
     left: 20px;
 }
-
-
-#Footer footer #ytMade {
+#Footer footer #copyright {
     position: absolute;
-    bottom: 0;
-    width: 250px;
-    height: 40px;
-    background: url("../img/youtubeDev.png") center center no-repeat;
-    background-size: 100%;
-    background-position: 50% 60%;
-}   
+    bottom: 5px;
+    font: 13pt "Mont";
+    color: #fff;
+}
 
 @media screen and (max-width: 1260px) {
     #Footer footer #languages {
