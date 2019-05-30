@@ -1,0 +1,36 @@
+#ErrorPage #body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #639, #528);
+    overflow: hidden;
+}
+#ErrorPage h1#errorCode {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    opacity: .2;
+    font: 450pt "Mont";
+    text-shadow: none;
+    transform: none;
+    overflow: hidden;
+    z-index: 0;
+}
+h1#errorCode::after, h2#errorDesc::after {content:none;}
+
+#ErrorPage h2#errorDesc {
+    color: #FFF;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font: 90pt "Geomanist-Book";
+}
+#ErrorPage button#backToHome {
+    font-size: 20pt;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 250px;
+}
