@@ -1,0 +1,78 @@
+#ValidSignup #body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right, #06C,#639);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#ValidSignup #body #wevolve-popup {
+    position: relative;
+    width: 550px;
+    height: 400px;
+    background: #FFF;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+#ValidSignup #body #wevolve-popup #wevolve-popup-logo {
+    width: 50%;
+    height: 50px;
+    margin: 5px auto;
+    background: url("../img/fullLogoColor.png") center center / contain no-repeat;
+}
+
+#ValidSignup #body #wevolve-popup #wevolve-popup-user-data {
+    overflow: hidden;
+}
+
+#ValidSignup #body #wevolve-popup #wevolve-popup-user-data #wevolve-popup-user-avatar {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(to top right, #06C,#639);
+    margin: 10px auto;
+    animation: avatar-in .3s ease;
+}
+
+#ValidSignup #body #wevolve-popup #wevolve-popup-user-data .wevolve-popup-user-data-line {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+#ValidSignup #body #wevolve-popup #wevolve-popup-user-data .wevolve-popup-user-data-line .wevolve-popup-user-data-line-title {
+    font: 14pt "Mont";
+}
+
+#ValidSignup #body #wevolve-popup #wevolve-popup-user-data .wevolve-popup-user-data-line .wevolve-popup-user-data-line-value {
+    padding-left: 10px;
+}
+
+#ValidSignup #body #wevolve-popup #wevolve-popup-tos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#ValidSignup #body #wevolve-popup #wevolve-popup-tos input[type="checkbox"]#accept-tos {
+    display: inline-block;
+}
+#ValidSignup #body #wevolve-popup #wevolve-popup-tos label {
+    display: inline-block;
+}
+#ValidSignup #body #wevolve-popup #wevolve-popup-signup-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px
+}
+
+#ValidSignup #body #wevolve-popup #wevolve-popup-back-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px
+}

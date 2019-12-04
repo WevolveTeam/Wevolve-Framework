@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Wevolve Framework</title>
-        <link href="assets/css/main.css" rel="stylesheet" />
-        <link href="assets/img/wevolve.ico" rel="icon" />
-        <script defer src="assets/js/sideMenu.js"></script>
-        <script defer src="assets/js/switchView.js"></script>
-        <script defer src="assets/js/Buttons.js"></script>
-        <script defer src="assets/js/SectionsTransition.js"></script>
-        <script defer src="assets/js/Forms.js"></script>
-        <script defer src="assets/js/main.js"></script>
-        <meta charset="utf-8" />
-    </head>
-    <body>
-        <div id="sideMenu">
-            <div id="logoContainer"></div>
-            <h1>Framework</h1>
-            <ul id="switchViewMenu"></ul>
-        </div>
-        <section class="FWView" id="Menus">
-            <input type="checkbox" nostyle="true" id="responsiveMenuToggle" />
-            <label for="responsiveMenuToggle" id="responsiveMenuToggleButton"></label>
-            <div id="Menu">
-                <div id="profileSection">
-                        <div id="logoContainer"></div>
-                            <div id="ifConnected">
-                                <input type="checkbox" nostyle="true" id="dropDownDisplayToggle" />
-                                <label for="dropDownDisplayToggle" id="profilePic"></label>
-                                <div id="dropDownProfileMenu">
-                                    <div id="profilePic"></div>
-                                    <h3>Hickacou</h3>
-                                    <ul>
-                                        <li id="profile"><a href="/profile">My profile</a></li>
-                                        <li id="settings"><a href="/profile/settings">Settings</a></li>
-                                        <li id="logout"><a onclick="logOut();">Log out</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        <div id="ifNotConnected">
-                            <button class="basic white" href="/account">Login</button>
-                        </div>
-                    </div>
+
+<head>
+    <title>Wevolve Framework</title>
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/img/wevolve.ico" rel="icon" />
+    <script defer src="assets/js/sideMenu.js"></script>
+    <script defer src="assets/js/switchView.js"></script>
+    <script defer src="assets/js/Buttons.js"></script>
+    <script defer src="assets/js/SectionsTransition.js"></script>
+    <script defer src="assets/js/Forms.js"></script>
+    <script defer src="assets/js/main.js"></script>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <div id="sideMenu">
+        <div id="logoContainer"></div>
+        <h1>Framework</h1>
+        <ul id="switchViewMenu"></ul>
+    </div>
+    <section class="FWView" id="Menus">
+        <input type="checkbox" nostyle="true" id="responsiveMenuToggle" />
+        <label for="responsiveMenuToggle" id="responsiveMenuToggleButton"></label>
+        <div id="Menu">
+            <div id="profileSection">
                 <div id="logoContainer"></div>
-                <ul id="mainLinks">
-                    <li id="home"><a href="/">Home</a></li>
-                    <li id="downloads"><a href="/downloads">Downloads</a></li>
-                    <li id="join-us"><a href="/join-us">Join us</a></li>
-                </ul>
-                
+                <div id="ifConnected">
+                    <input type="checkbox" nostyle="true" id="dropDownDisplayToggle" />
+                    <label for="dropDownDisplayToggle" id="profilePic"></label>
+                    <div id="dropDownProfileMenu">
+                        <div id="profilePic"></div>
+                        <h3>Hickacou</h3>
+                        <ul>
+                            <li id="profile"><a href="/profile">My profile</a></li>
+                            <li id="settings"><a href="/profile/settings">Settings</a></li>
+                            <li id="logout"><a onclick="logOut();">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="ifNotConnected">
+                    <button class="basic white" href="/account">Login</button>
+                </div>
             </div>
-            <button id="profileSectionSwitch" style="margin:300px;">Switch Connected/Not Connected</button>
-            <script defer>
+            <div id="logoContainer"></div>
+            <ul id="mainLinks">
+                <li id="home"><a href="/">Home</a></li>
+                <li id="downloads"><a href="/downloads">Downloads</a></li>
+                <li id="join-us"><a href="/join-us">Join us</a></li>
+            </ul>
+
+        </div>
+        <button id="profileSectionSwitch" style="margin:300px;">Switch Connected/Not Connected</button>
+        <script defer>
             var btnPss = document.getElementById("profileSectionSwitch");
             var ifc = document.getElementById("ifConnected");
             var ifnc = document.getElementById("ifNotConnected");
@@ -61,124 +63,152 @@
                 ifnc.style.display = conenb ? "block" : "none";
                 conenb = !conenb;
             });
-            </script>
+        </script>
 
-        </section>
-        <section class="FWView" id="Texts">
-            <h1>H1 Centered Title</h1>
-            <h2>H2 Left Title</h2>
-            <p>Lorem ipsum dolor, sit amet <a href="#">y'a un lien issou</a>consectetur adipisicing elit. Reprehenderit consequatur ut nemo natus voluptatum quidem sequi sapiente quia iste autem at eaque explicabo blanditiis quasi numquam ipsa, aliquam possimus nihil!</p>
-        </section>
-        <section class="FWView" id="Buttons">
-            <button class="basic color">Basic Button</button>
-            <button class="icon color"><i class="material-icons">power_settings_new</i></button><i>Icon Button</i>
-            <div id="FWcolorBg">
-                <button class="basic white">Basic white Button</button>
-                <button class="icon white"><i class="material-icons">power_settings_new</i></button><i>White Icon Button</i>
+    </section>
+    <section class="FWView" id="Texts">
+        <h1>H1 Centered Title</h1>
+        <h2>H2 Left Title</h2>
+        <p>Lorem ipsum dolor, sit amet <a href="#">y'a un lien issou</a>consectetur adipisicing elit. Reprehenderit
+            consequatur ut nemo natus voluptatum quidem sequi sapiente quia iste autem at eaque explicabo blanditiis
+            quasi numquam ipsa, aliquam possimus nihil!</p>
+    </section>
+    <section class="FWView" id="Buttons">
+        <button class="basic color">Basic Button</button>
+        <button class="icon color"><i class="material-icons">power_settings_new</i></button><i>Icon Button</i>
+        <div id="FWcolorBg">
+            <button class="basic white">Basic white Button</button>
+            <button class="icon white"><i class="material-icons">power_settings_new</i></button><i>White Icon Button</i>
+        </div>
+    </section>
+    <section class="FWView" id="SectionsTransition">
+        <button onclick="triggerTransition()">Trigger Transition</button>
+        <div id="transitionContainer" class="">
+        </div>
+    </section>
+    <section class="FWView" id="Forms">
+        <form>
+            <div class="formSection">
+                <h2>Personal data</h2>
+                <input type="text" id="tt" name="tt" placeholder="Username" />
+                <input type="password" placeholder="Password" />
+                <input type="radio" name="radiotest" label="Valeur du label 1" value="valeur1" />
+                <input type="radio" name="radiotest" label="Valeur du label 2" value="valeur3" />
+                <input type="radio" name="radiotest" value="valeur2" />
+                <input type="checkbox" name="checktest" id="checktest2" label="tg" />
+                <input type="checkbox" name="checktest" id="checktest3" label="slt" />
+                <input type="checkbox" name="checktest" id="checktest4" />
             </div>
-        </section>
-        <section class="FWView" id="SectionsTransition">
-            <button onclick="triggerTransition()">Trigger Transition</button>
-            <div id="transitionContainer" class="">
+        </form>
+    </section>
+    <section class="FWView" id="Table">
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Password</th>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>Hickacou</td>
+                <td>ffzefezfze</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ozachi</td>
+                <td>fzfezfezfezfez!32</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Laizrod</td>
+                <td>zfefzfezfezfez</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>zefzfzfafaefa</td>
+                <td>fezfezfezfez</td>
+            </tr>
+        </table>
+        <b><i>WORK IN PROGRESS</i></b>
+    </section>
+    <section class="FWView" id="Textarea">
+        <textarea cols="100" rows="20"></textarea>
+    </section>
+    <section class="FWView" id="Footer">
+        <footer>
+            <div id="wevolveLogo"></div>
+            <div class="footerFlex">
+                <h2>Wevolve</h2>
+                <ul id="wevolveLinks">
+                    <li><a href="#">Nous contacter</a></li>
+                    <li><a href="#">Translator</a></li>
+                    <li><a href="#">Ressources graphiques</a></li>
+                    <li><a href="#">Conditions Générales d'Utilisation</a></li>
+                </ul>
             </div>
-        </section>
-        <section class="FWView" id="Forms">
-            <form>
-                <div class="formSection">
-                    <h2>Personal data</h2>
-                    <input type="text" id="tt" name="tt" placeholder="Username" />
-                    <input type="password" placeholder="Password" />
-                    <input type="radio" name="radiotest" label="Valeur du label 1" value="valeur1" />
-                    <input type="radio" name="radiotest" label="Valeur du label 2" value="valeur3" />
-                    <input type="radio" name="radiotest" value="valeur2" />
-                    <input type="checkbox" name="checktest" id="checktest2" label="tg" />
-                    <input type="checkbox" name="checktest" id="checktest3" label="slt" />
-                    <input type="checkbox" name="checktest" id="checktest4" />
+            <div class="footerFlex">
+                <h2>Navigation</h2>
+                <ul id="navigationLinks">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Téléchargements</a></li>
+                    <li><a href="#">Nous rejoindre</a></li>
+                </ul>
+            </div>
+            <div class="footerFlex" id="socials">
+                <h2>Réseaux sociaux</h2>
+                <ul id="socialLinks">
+                    <li><a id="facebook" href="#">Facebook</a></li>
+                    <li><a id="twitter" href="#">Twitter</a></li>
+                    <li><a id="github" href="#">Github</a></li>
+                    <li><a id="discord" href="#">Discord</a></li>
+                </ul>
+            </div>
+            <div id="languages">
+                <div id="selectLanguage-wrap">
+                    <select id="selectLanguage">
+                        <option name="fr">Français</option>
+                        <option name="en">English</option>
+                        <option name="es">Espanõl</option>
+                        <option name="it">Italian</option>
+                        <option name="ro">Romaña</option>
+                    </select>
                 </div>
-            </form>
-        </section>
-        <section class="FWView" id="Table">
-            <table>
-                <thead>
-                    <th>ID</th>
-                    <th>Username</th>
-                    <th>Password</th>
-                </thead>
-                <tr>
-                    <td>1</td>
-                    <td>Hickacou</td>
-                    <td>ffzefezfze</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Ozachi</td>
-                    <td>fzfezfezfezfez!32</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Laizrod</td>
-                    <td>zfefzfezfezfez</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>zefzfzfafaefa</td>
-                    <td>fezfezfezfez</td>
-                </tr>
-            </table>
-            <b><i>WORK IN PROGRESS</i></b>
-        </section>
-        <section class="FWView" id="Textarea">
-            <textarea cols="100" rows="20"></textarea>
-        </section>
-        <section class="FWView" id="Footer">
-            <footer>
-                <div id="wevolveLogo"></div>
-                <div class="footerFlex"> 
-                    <h2>Wevolve</h2>
-                    <ul id="wevolveLinks">
-                        <li><a href="#">Nous contacter</a></li>
-                        <li><a href="#">Translator</a></li>
-                        <li><a href="#">Ressources graphiques</a></li>
-                        <li><a href="#">Conditions Générales d'Utilisation</a></li>
-                    </ul>
-                </div>
-                <div class="footerFlex"> 
-                    <h2>Navigation</h2>
-                    <ul id="navigationLinks">
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#">Téléchargements</a></li>
-                        <li><a href="#">Nous rejoindre</a></li>
-                    </ul>
-                </div>
-                <div class="footerFlex" id="socials"> 
-                    <h2>Réseaux sociaux</h2>
-                    <ul id="socialLinks">
-                        <li><a id="facebook" href="#">Facebook</a></li>
-                        <li><a id="twitter" href="#">Twitter</a></li>
-                        <li><a id="github" href="#">Github</a></li>
-                        <li><a id="discord" href="#">Discord</a></li>
-                    </ul>
-                </div>
-                <div id="languages"> 
-                    <div id="selectLanguage-wrap">
-                        <select id="selectLanguage">
-                            <option name="fr">Français</option>
-                            <option name="en">English</option>
-                            <option name="es">Espanõl</option>
-                            <option name="it">Italian</option>
-                            <option name="ro">Romaña</option>
-                        </select>
+            </div>
+            <div id="copyright">© - Wevolve Team - 2019</div>
+        </footer>
+    </section>
+    <section class="FWView" id="ErrorPage">
+        <div id="body">
+            <h1 id="errorCode">404</h1>
+            <h2 id="errorDesc">Page non trouvée</h2>
+            <button class="basic white" href="#" id="backToHome">Home</p>
+        </div>
+    </section>
+    <section class="FWView viewed" id="ValidSignup">
+        <div id="body">
+            <div id="wevolve-popup">
+                <div id="wevolve-popup-logo"></div>
+                <div id="wevolve-popup-user-data">
+                    <img src="https://cdn.discordapp.com/avatars/192671814650953728/2a8950acae5a01750c1a94dbe671fe29.jpg?size=512"
+                        id="wevolve-popup-user-avatar">
+                    <div id="wevolve-popup-user-name" class="wevolve-popup-user-data-line">
+                        <div class="wevolve-popup-user-data-line-title">Nom d'utilisateur</div>
+                        <div class="wevolve-popup-user-data-line-value">Pudding Mangue</div>
+                    </div>
+                    <div id="wevolve-popup-user-mail" class="wevolve-popup-user-data-line">
+                        <div class="wevolve-popup-user-data-line-title">Adresse mail</div>
+                        <div class="wevolve-popup-user-data-line-value">hickacou@gmail.com</div>
                     </div>
                 </div>
-                <div id="copyright">© - Wevolve Team - 2019</div>
-            </footer>
-        </section>
-        <section class="FWView viewed" id="ErrorPage">
-            <div id="body">
-                <h1 id="errorCode">404</h1>
-                <h2 id="errorDesc">Page non trouvée</h2>
-                <button class="basic white" href="#" id="backToHome">Home</p>
+                <div id="wevolve-popup-tos">
+                    <input type="checkbox" id="accept-tos" /><label for="accept-tos">En m'inscrivant,
+                        j'accepte les <a href="https://wevolve.yt/tos" target="_blank">Conditions Générales d'Utilisation</a>.</label>
+                </div>
+                <button class="icon color" id="wevolve-popup-back-button"><i class="material-icons">arrow_back</i></button>
+                <button class="basic color" id="wevolve-popup-signup-button">S'inscrire</button> 
             </div>
-        </section>
-    </body>
+        </div>
+    </section>
+</body>
+
 </html>
