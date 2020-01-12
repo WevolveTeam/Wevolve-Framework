@@ -145,3 +145,30 @@
         height: 30px;
     }
 }
+
+@media screen and (max-width: 560px) {
+    #Footer footer {
+        height: 300px;
+    }
+    #Footer footer .footerFlex {
+        margin: 0 20px;
+    }
+    #Footer footer ul {
+        font-size: 10pt;
+        height: 100px;
+    }
+    #Footer footer #languages {
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: 120px;
+    }
+    #Footer footer #copyright {
+        top: auto;
+        bottom: 85px;
+    }
+
+    .footerFlex#socials {
+        bottom: -50px;
+    }
+}

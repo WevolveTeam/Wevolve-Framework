@@ -40,6 +40,11 @@ a {
     color: #06C;
     text-decoration: underline;
 }
+
+div#sideMenu[hidden] {
+    display: none;
+}
+
 div#sideMenu {
     top: 0;
     bottom: 0;
